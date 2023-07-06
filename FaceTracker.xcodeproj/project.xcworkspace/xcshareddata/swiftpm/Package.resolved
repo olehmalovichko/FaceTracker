@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "metalpetal#process-live-video-with-videoio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MetalPetal/MetalPetal#process-live-video-with-videoio",
+      "state" : {
+        "revision" : "f9b78897bd4214bb097f352a1bde0a4f4a1e2ddb",
+        "version" : "1.25.2"
+      }
+    },
+    {
+      "identity" : "videoio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MetalPetal/VideoIO",
+      "state" : {
+        "revision" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 2
+}

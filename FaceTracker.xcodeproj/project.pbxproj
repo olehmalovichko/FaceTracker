@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D16C7372A54060000F29C0B /* FaceTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16C7362A54060000F29C0B /* FaceTrackerApp.swift */; };
+		2D16C7392A54060000F29C0B /* FaceTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16C7382A54060000F29C0B /* FaceTrackerView.swift */; };
+		2D16C73B2A54060100F29C0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D16C73A2A54060100F29C0B /* Assets.xcassets */; };
+		2D16C73E2A54060100F29C0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D16C73D2A54060100F29C0B /* Preview Assets.xcassets */; };
+		2D6F9FAB2A573A9300B48873 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F9FAA2A573A9300B48873 /* Task.swift */; };
+		2D9ED28A2A56A2C900588825 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9ED2892A56A2C900588825 /* Effect.swift */; };
+		2D9ED28C2A56A31D00588825 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9ED28B2A56A31D00588825 /* Face.swift */; };
+		2DFD080B2A5406E60002F330 /* MetalPetal in Frameworks */ = {isa = PBXBuildFile; productRef = 2DFD080A2A5406E60002F330 /* MetalPetal */; };
+		2DFD080D2A5407A40002F330 /* CapturePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD080C2A5407A40002F330 /* CapturePipeline.swift */; };
+		2DFD08102A540A510002F330 /* VideoIO in Frameworks */ = {isa = PBXBuildFile; productRef = 2DFD080F2A540A510002F330 /* VideoIO */; };
+		2DFD08122A540AE90002F330 /* PixelBufferPoolBackedImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD08112A540AE90002F330 /* PixelBufferPoolBackedImageRenderer.swift */; };
+		2DFD08172A5416E50002F330 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD08162A5416E40002F330 /* UIApplication.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D16C7332A54060000F29C0B /* FaceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D16C7362A54060000F29C0B /* FaceTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackerApp.swift; sourceTree = "<group>"; };
+		2D16C7382A54060000F29C0B /* FaceTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackerView.swift; sourceTree = "<group>"; };
+		2D16C73A2A54060100F29C0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D16C73D2A54060100F29C0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D16C73F2A54060100F29C0B /* FaceTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FaceTracker.entitlements; sourceTree = "<group>"; };
+		2D6F9FAA2A573A9300B48873 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2D9ED2892A56A2C900588825 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		2D9ED28B2A56A31D00588825 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		2DFD080C2A5407A40002F330 /* CapturePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePipeline.swift; sourceTree = "<group>"; };
+		2DFD08112A540AE90002F330 /* PixelBufferPoolBackedImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBufferPoolBackedImageRenderer.swift; sourceTree = "<group>"; };
+		2DFD08152A540D2A0002F330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2DFD08162A5416E40002F330 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D16C7302A54060000F29C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFD08102A540A510002F330 /* VideoIO in Frameworks */,
+				2DFD080B2A5406E60002F330 /* MetalPetal in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D16C72A2A54060000F29C0B = {
+			isa = PBXGroup;
+			children = (
+				2D16C7352A54060000F29C0B /* FaceTracker */,
+				2D16C7342A54060000F29C0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D16C7342A54060000F29C0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D16C7332A54060000F29C0B /* FaceTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D16C7352A54060000F29C0B /* FaceTracker */ = {
+			isa = PBXGroup;
+			children = (
+				2D16C73F2A54060100F29C0B /* FaceTracker.entitlements */,
+				2DFD08152A540D2A0002F330 /* Info.plist */,
+				2DFD080C2A5407A40002F330 /* CapturePipeline.swift */,
+				2D16C7362A54060000F29C0B /* FaceTrackerApp.swift */,
+				2D16C7382A54060000F29C0B /* FaceTrackerView.swift */,
+				2DFD08112A540AE90002F330 /* PixelBufferPoolBackedImageRenderer.swift */,
+				2D16C73A2A54060100F29C0B /* Assets.xcassets */,
+				2D9ED28D2A56A33A00588825 /* Entities */,
+				2DFD08182A5417050002F330 /* Extensions */,
+				2D16C73C2A54060100F29C0B /* Preview Content */,
+			);
+			path = FaceTracker;
+			sourceTree = "<group>";
+		};
+		2D16C73C2A54060100F29C0B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2D16C73D2A54060100F29C0B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2D9ED28D2A56A33A00588825 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2D9ED2892A56A2C900588825 /* Effect.swift */,
+				2D9ED28B2A56A31D00588825 /* Face.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2DFD08182A5417050002F330 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DFD08162A5416E40002F330 /* UIApplication.swift */,
+				2D6F9FAA2A573A9300B48873 /* Task.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D16C7322A54060000F29C0B /* FaceTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D16C7422A54060100F29C0B /* Build configuration list for PBXNativeTarget "FaceTracker" */;
+			buildPhases = (
+				2D16C72F2A54060000F29C0B /* Sources */,
+				2D16C7302A54060000F29C0B /* Frameworks */,
+				2D16C7312A54060000F29C0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceTracker;
+			packageProductDependencies = (
+				2DFD080A2A5406E60002F330 /* MetalPetal */,
+				2DFD080F2A540A510002F330 /* VideoIO */,
+			);
+			productName = FaceTracker;
+			productReference = 2D16C7332A54060000F29C0B /* FaceTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D16C72B2A54060000F29C0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2D16C7322A54060000F29C0B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2D16C72E2A54060000F29C0B /* Build configuration list for PBXProject "FaceTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D16C72A2A54060000F29C0B;
+			packageReferences = (
+				2DFD08092A5406E60002F330 /* XCRemoteSwiftPackageReference "MetalPetal" */,
+				2DFD080E2A540A510002F330 /* XCRemoteSwiftPackageReference "VideoIO" */,
+			);
+			productRefGroup = 2D16C7342A54060000F29C0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D16C7322A54060000F29C0B /* FaceTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D16C7312A54060000F29C0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D16C73E2A54060100F29C0B /* Preview Assets.xcassets in Resources */,
+				2D16C73B2A54060100F29C0B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D16C72F2A54060000F29C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D6F9FAB2A573A9300B48873 /* Task.swift in Sources */,
+				2D9ED28C2A56A31D00588825 /* Face.swift in Sources */,
+				2D9ED28A2A56A2C900588825 /* Effect.swift in Sources */,
+				2D16C7392A54060000F29C0B /* FaceTrackerView.swift in Sources */,
+				2DFD08122A540AE90002F330 /* PixelBufferPoolBackedImageRenderer.swift in Sources */,
+				2DFD080D2A5407A40002F330 /* CapturePipeline.swift in Sources */,
+				2DFD08172A5416E50002F330 /* UIApplication.swift in Sources */,
+				2D16C7372A54060000F29C0B /* FaceTrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2D16C7402A54060100F29C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D16C7412A54060100F29C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2D16C7432A54060100F29C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FaceTracker/FaceTracker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FaceTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = L46PVH8WDP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FaceTracker/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olehmalovichko.facetracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2D16C7442A54060100F29C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FaceTracker/FaceTracker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FaceTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = L46PVH8WDP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FaceTracker/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.olehmalovichko.facetracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D16C72E2A54060000F29C0B /* Build configuration list for PBXProject "FaceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D16C7402A54060100F29C0B /* Debug */,
+				2D16C7412A54060100F29C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D16C7422A54060100F29C0B /* Build configuration list for PBXNativeTarget "FaceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D16C7432A54060100F29C0B /* Debug */,
+				2D16C7442A54060100F29C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2DFD08092A5406E60002F330 /* XCRemoteSwiftPackageReference "MetalPetal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MetalPetal/MetalPetal#process-live-video-with-videoio";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		2DFD080E2A540A510002F330 /* XCRemoteSwiftPackageReference "VideoIO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MetalPetal/VideoIO";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2DFD080A2A5406E60002F330 /* MetalPetal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DFD08092A5406E60002F330 /* XCRemoteSwiftPackageReference "MetalPetal" */;
+			productName = MetalPetal;
+		};
+		2DFD080F2A540A510002F330 /* VideoIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DFD080E2A540A510002F330 /* XCRemoteSwiftPackageReference "VideoIO" */;
+			productName = VideoIO;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2D16C72B2A54060000F29C0B /* Project object */;
+}

@@ -19,9 +19,9 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
         var isVideoMirrored = true
     }
     
-    @Published private var stateChangeCount: Int = 0
+    private var stateChangeCount: Int = 0
     
-    private var _state: State = State()
+    private var currentState: State = State()
     
     private let stateLock = MTILockCreate()
     
@@ -31,7 +31,7 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
             defer {
                 stateLock.unlock()
             }
-            return _state
+            return currentState
         }
         set {
             stateLock.lock()
@@ -39,13 +39,13 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
                 stateLock.unlock()
                 stateChangeCount += 1
             }
-            _state = newValue
+            currentState = newValue
         }
     }
     
-    @Published var previewImage: CGImage?
+    @Published private(set) var previewImage: CGImage?
     
-    private let renderContext = try! MTIContext(device: MTLCreateSystemDefaultDevice()!)
+    private let renderContext = try? MTIContext(device: MTLCreateSystemDefaultDevice()!)
     
     private let camera: Camera = {
         var configurator = Camera.Configurator()
@@ -117,14 +117,12 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
         let hasAudio = self.camera.audioDataOutput != nil
         let recorder = try MovieRecorder(url: url, configuration: MovieRecorder.Configuration(hasAudio: hasAudio))
         state.isRecording = true
-        
-        Task {
-            self.recorder = recorder
-        }
+        self.recorder = recorder
     }
     
     func stopRecording(completion: @escaping (Result<URL, Error>) -> Void) {
         if let recorder = recorder {
+            
             recorder.stopRecording(completion: { error in
                 self.state.isRecording = false
                 if let error = error {
@@ -134,9 +132,7 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
                 }
             })
             
-            Task {
-                self.recorder = nil
-            }
+            self.recorder = nil
         }
     }
     
@@ -153,7 +149,12 @@ class CapturePipeline: NSObject, ObservableObject, AVCaptureVideoDataOutputSampl
                 print(error)
             }
         case .video:
-            guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+            guard let renderContext else {
+                return
+            }
+            guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+                return
+            }
             do {
                 let image = MTIImage(cvPixelBuffer: pixelBuffer, alphaType: .alphaIsOne)
                 let filterOutputImage = self.filter(image, faces)
